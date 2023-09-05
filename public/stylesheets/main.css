@@ -1,0 +1,20 @@
+#map {
+    text-align: center;
+
+}
+.elementBtn{
+    position: absolute;
+}
+
+.OUTLINE:hover{
+    fill: #f1c40f;
+}
+.OUTLINE.active{
+    fill: #f1c40f;
+}
+
+.button{
+    background-color: #f1c40f;
+    color: aliceblue;
+    font-size: 16px;
+}

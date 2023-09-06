@@ -13,9 +13,13 @@
 </head>
 
 <body>
+    <div class="header">
+        <h1>서울시 침수 예측</h1>
+    </div>
+
     <div id="wrap">
         <div id='map'>
-            <svg id="seoulMap" style='border: solid 1px #4d4d4d ; background:#ffffff;overflow:visible' height="656" width="800" xmlns="http://www.w3.org/2000/svg">
+            <svg id="seoulMap" style='background:#ffffff;overflow:visible; ' viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <filter id="dropshadow">
                         <feGaussianBlur in="SourceAlpha" stdDeviation="7" />
@@ -112,7 +116,12 @@
                 .then(data => {
                     console.log(data);
                     // 결과를 HTML 페이지에 표시
-                    resultDiv.innerHTML = `예측 결과: ${data}`;
+                    if(data==0){
+                        resultDiv.innerHTML = `AI가 말합니다. \"오늘은 아무 일도 일어나지 않습니다.\"`;
+                    }
+                    else{
+                        resultDiv.innerHTML = `AI가 말합니다. \"오늘은 침수 되는 날\"`;
+                    }
                 })
                 .catch(error => {
                     console.error(error);

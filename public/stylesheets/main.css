@@ -1,7 +1,49 @@
-#map {
-    text-align: center;
+html {
+    width:100vw;    
+}
+body {
+    width:100vw;
+    margin: 0px;
+}
+.header {
+    width:100vw;
+    background-color: #4d4d4d; /* 배경색 설정 */
+    color: #fff; /* 텍스트 색상 설정 */
+    font-size: 13px;
+    text-align: left; /* 텍스트 가운데 정렬 */
+    padding: 15px 50px; /* 위아래 여백 설정 */
+    height: 50px;
+}
+.header h1 {
+    margin: 8px 0px;
+}
+#wrap{
 
 }
+#map {
+    margin-bottom: 50px;
+    text-align: center;
+    height: 450;
+}
+svg {
+    width: 50%; /* 화면 너비의 50% 크기로 설정 */
+}
+@media screen and (max-width: 1200px) {
+    svg {
+        width: 60%; /* 원하는 비율로 조절 가능 */
+    }
+}
+@media screen and (max-width: 900px) {
+    svg {
+        width: 70%; /* 원하는 비율로 조절 가능 */
+    }
+}
+@media screen and (max-width: 600px) {
+    svg {
+        width: 90%; /* 원하는 비율로 조절 가능 */
+    }
+}
+
 .elementBtn{
     position: absolute;
 }
@@ -14,7 +56,36 @@
 }
 
 .button{
-    background-color: #f1c40f;
+    background-color: #f0d360;
     color: aliceblue;
     font-size: 16px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    width:600px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    /*background-color: #77af9c;
+    color: #d7fff1;*/
+}
+
+.predView{
+    width: 100%;
+    display: inline;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    padding-left: 33vw;
+}
+#resultDiv{
+    margin-top: 30px;
+    
+    padding-left: 37vw;
+    color: #4d4d4d;
+    font-weight: 800;
+    font-size: 18px;  
 }
